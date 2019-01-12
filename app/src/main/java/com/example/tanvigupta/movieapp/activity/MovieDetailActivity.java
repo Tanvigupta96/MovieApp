@@ -306,12 +306,12 @@ public class MovieDetailActivity extends AppCompatActivity implements View.OnCli
                 movieTable.setTitle(title);
                 movieTable.setChecked(true);
                 movieDatabase.getDao().addMovie(movieTable);
-                Toast.makeText(this, "Added to favourites", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Added to favourites", Toast.LENGTH_SHORT).show();
                 }
                 else{
                 item.setIcon(R.drawable.ic_favorite_border_white_24dp);
                 liked=false;
-                Toast.makeText(this,"Removed from favourites",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Removed from favourites",Toast.LENGTH_SHORT).show();
                 int Mid=movieDatabase.getDao().getMovieTableId(id);
                 MovieTable movieTable=new MovieTable();
                 movieTable.setTableId(Mid);

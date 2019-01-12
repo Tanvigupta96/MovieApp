@@ -374,12 +374,12 @@ public class TvShowDetailActivity extends AppCompatActivity implements View.OnCl
                 tvTable.setTitle(title);
                 tvTable.setChecked(true);
                 movieDatabase.getDao().addTv(tvTable);
-                Toast.makeText(this, "Added to Favourites", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Added to Favourites", Toast.LENGTH_SHORT).show();
                 }
                 else{
                 item.setIcon(R.drawable.ic_favorite_border_white_24dp);
                 liked=false;
-                Toast.makeText(this,"Removed from favourites",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Removed from favourites",Toast.LENGTH_SHORT).show();
                 int Tid=movieDatabase.getDao().getTvTableId(id);
                 TvTable tvTable=new TvTable();
                 tvTable.setTableId(Tid);
