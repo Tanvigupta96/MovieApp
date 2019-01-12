@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.tanvigupta.movieapp.fragments.MovieFavourites;
 import com.example.tanvigupta.movieapp.fragments.TvFavourites;
-import com.example.tanvigupta.movieapp.fragments.TvShowsFragment;
 
 public class FavouritePagerAdapter extends FragmentPagerAdapter {
 

@@ -311,8 +311,12 @@ public class MovieDetailActivity extends AppCompatActivity implements View.OnCli
                 else{
                 item.setIcon(R.drawable.ic_favorite_border_white_24dp);
                 liked=false;
-                Toast.makeText(this,"Deleted from favourites",Toast.LENGTH_LONG).show();
-                        //deletion wala kam
+                Toast.makeText(this,"Removed from favourites",Toast.LENGTH_LONG).show();
+                int Mid=movieDatabase.getDao().getMovieTableId(id);
+                MovieTable movieTable=new MovieTable();
+                movieTable.setTableId(Mid);
+                movieDatabase.getDao().deleteMovie(movieTable);
+
                 }
 
             }

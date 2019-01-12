@@ -2,6 +2,7 @@ package com.example.tanvigupta.movieapp.DataBase;
 
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
@@ -38,6 +39,18 @@ public interface MovieDao {
     public long getTvId();
 
 
+    @Query("Select TableId from MovieTable where id=:id")
+    public int getMovieTableId(long id);
+
+    @Delete
+     void deleteMovie(MovieTable movieTable);
+
+
+    @Query("Select TableId from TvTable where id=:id")
+    public int getTvTableId(long id);
+
+    @Delete
+    void deleteTv(TvTable tvTable);
 
 
 }
