@@ -14,7 +14,8 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
 
 
         <android.support.design.widget.TabLayout
@@ -24,7 +25,7 @@
             app:tabIndicatorColor="#6cd5d7"
             app:tabIndicatorHeight="4dp"
             app:tabMinWidth="180dp"
-            >
+            android:background="#e7e6e6">
 
 
             <android.support.design.widget.TabItem
@@ -32,13 +33,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_movie_creation_black_24dp"
+
                 />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/favtvshows"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:icon="@drawable/ic_important_devices_black_24dp"/>
+                android:icon="@drawable/ic_important_devices_black_24dp"
+               />
 
         </android.support.design.widget.TabLayout>
 
