@@ -5,10 +5,10 @@
 
     <item android:title="TV shows" android:id="@+id/tvshows" android:icon="@drawable/ic_important_devices_black_24dp"/>
 
-    <item android:title="popularppl" android:id="@+id/popularpeople" android:icon="@drawable/ic_people_outline_grey_500_24dp"/>
+    <item android:title="Popular People" android:id="@+id/popularpeople" android:icon="@drawable/ic_people_outline_grey_500_24dp"/>
 
-    <item android:title="favourites" android:id="@+id/favourites" android:icon="@drawable/ic_favorite_grey_500_24dp"/>
+    <item android:title="Favourites" android:id="@+id/favourites" android:icon="@drawable/ic_favorite_grey_500_24dp"/>
 
-    <item android:title="about" android:id="@+id/aboutus" android:icon="@drawable/ic_info_outline_grey_500_24dp"/>
+    <item android:title="About" android:id="@+id/aboutus" android:icon="@drawable/ic_info_outline_grey_500_24dp"/>
 </menu>
 

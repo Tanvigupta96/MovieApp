@@ -14,6 +14,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.tanvigupta.movieapp.DataBase.MovieDatabase;
 import com.example.tanvigupta.movieapp.DataBase.MovieTable;
@@ -35,6 +37,8 @@ public class MovieFavourites extends Fragment {
 
     RecyclerView recyclerView;
     FavMovieAdapter favMovieAdapter;
+    RelativeLayout rv;
+
 
     List<MovieTable> movieTables= new ArrayList<>();
 
@@ -52,12 +56,17 @@ public class MovieFavourites extends Fragment {
         movieDatabase= Room.databaseBuilder(view.getContext(),MovieDatabase.class,"movie_db").allowMainThreadQueries().build();
 
 
+
+
+
         final List<MovieTable> list= movieDatabase.getDao().getMovies();
+
 
         if(list.size()!=0) {
 
             Log.i("room",list.size()+"");
             recyclerView = view.findViewById(R.id.favmovies);
+
 
             favMovieAdapter = new FavMovieAdapter(view.getContext(), list, new MovieClickListener() {
                 @Override

@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".fragments.MovieFavourites">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/favtv"
@@ -14,5 +18,35 @@
 
     </android.support.v7.widget.RecyclerView>
 
+
+   <!-- <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="260dp"
+        >
+
+        <ImageView
+            android:id="@+id/desc_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_favorite_grey_600_48dp"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:text="No Favourite Tv Shows"
+            android:textSize="20sp"
+            android:layout_below="@+id/desc_image"
+            android:gravity="center"/>
+    </RelativeLayout>-->
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
