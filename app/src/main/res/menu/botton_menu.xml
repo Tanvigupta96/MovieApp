@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Movies" android:id="@+id/movies" android:icon="@drawable/ic_movie_creation_grey_500_18dp"/>
+
+    <item android:title="TV shows" android:id="@+id/tvshows" android:icon="@drawable/ic_important_devices_black_24dp"/>
+
+    <item android:title="popularppl" android:id="@+id/popularpeople" android:icon="@drawable/ic_people_outline_grey_500_24dp"/>
+
+    <item android:title="favourites" android:id="@+id/favourites" android:icon="@drawable/ic_favorite_grey_500_24dp"/>
+
+    <item android:title="about us" android:id="@+id/aboutus" android:icon="@drawable/ic_info_outline_grey_500_24dp"/>
+</menu>
+

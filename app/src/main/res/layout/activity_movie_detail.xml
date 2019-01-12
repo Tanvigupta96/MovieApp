@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MovieDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+            <ImageView
+                android:id="@+id/coverimage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:fitsSystemWindows="true"
+                android:focusable="false"
+                android:minHeight="100dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+
+                <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/linearscaleprogressloader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicator_color="#ffffff"
+                app:indicator="LineScale"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                    android:layout_gravity="center" />
+
+
+            </android.support.design.widget.CoordinatorLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="190dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="150dp"
+                    >
+
+
+                <ImageView
+                    android:id="@+id/titleimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     />
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/ballpulse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:indicator="BallPulse"
+                        app:indicator_color="#ffffff"
+                        android:layout_gravity="center"
+
+                        />
+
+
+
+
+
+
+                </android.support.design.widget.CoordinatorLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/postertitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="240dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        tools:text="a text" />
+
+
+                    <TextView
+                        android:id="@+id/postergenere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textStyle="bold"
+                        tools:text="a text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:fitsSystemWindows="true"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_movie_detail" />
+
+
+</android.support.design.widget.CoordinatorLayout>

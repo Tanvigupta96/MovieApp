@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".fragments.TvShowsFragment">
+
+            <TextView
+                android:id="@+id/airingtoday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#eeeeee"
+                android:padding="4dp"
+                android:text="Airing Today"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                />
+
+
+            <TextView
+                android:id="@+id/popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#eeeeee"
+                android:padding="4dp"
+                android:text="Popular"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/toprated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#eeeeee"
+                android:padding="4dp"
+                android:text="Top-rated"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+
+            <!--<android.support.v7.widget.AppCompatButton
+                android:id="@+id/retry1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Retry"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                tools:visibility="visible" />-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+
+
+
+            <TextView
+                android:id="@+id/upcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#eeeeee"
+                android:padding="4dp"
+                android:text="on-the-air"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+</FrameLayout>

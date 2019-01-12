@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.CastDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="100dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/castimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#c4c3c3"/>
+
+
+                    <com.wang.avi.AVLoadingIndicatorView
+                        android:id="@+id/ballspinfadeoader"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        app:indicator="BallSpinFadeLoader"
+                        app:indicator_color="#ffffff"
+                        android:visibility="visible"
+                        android:layout_gravity="center"
+                        />
+
+
+
+
+
+
+                </android.support.design.widget.CoordinatorLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.CoordinatorLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                <TextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="100dp"
+                    android:id="@+id/castname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="cast name"
+                    />
+
+                        <com.wang.avi.AVLoadingIndicatorView
+                            android:id="@+id/ballpulse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            app:indicator="BallPulse"
+                            app:indicator_color="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="100dp"
+                            />
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="130dp"
+                        android:id="@+id/castcategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="cast category"
+                        />
+
+
+                    </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_cast_detail" />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
