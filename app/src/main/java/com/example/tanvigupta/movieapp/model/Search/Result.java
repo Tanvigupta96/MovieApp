@@ -2,50 +2,47 @@
 package com.example.tanvigupta.movieapp.model.Search;
 
 import java.util.List;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
+@SuppressWarnings("unused")
 public class Result {
 
-    @Expose
-    private Boolean adult;
     @SerializedName("backdrop_path")
     private String backdropPath;
+    @SerializedName("first_air_date")
+    private String firstAirDate;
     @SerializedName("genre_ids")
     private List<Long> genreIds;
     @Expose
     private Long id;
     @SerializedName("media_type")
     private String mediaType;
+    @Expose
+    private String name;
+    @SerializedName("origin_country")
+    private List<String> originCountry;
     @SerializedName("original_language")
     private String originalLanguage;
-    @SerializedName("original_title")
-    private String originalTitle;
+    @SerializedName("original_name")
+    private String originalName;
     @Expose
     private String overview;
     @Expose
     private Double popularity;
     @SerializedName("poster_path")
     private String posterPath;
-    @SerializedName("release_date")
-    private String releaseDate;
-    @Expose
-    private String title;
-    @Expose
-    private Boolean video;
-
+    @SerializedName("vote_average")
+    private Double voteAverage;
     @SerializedName("vote_count")
     private Long voteCount;
+    @SerializedName("title")
+    private  String title;
 
-    public Boolean getAdult() {
-        return adult;
-    }
+    public void setTitle(String title) { this.title = title; }
 
-    public void setAdult(Boolean adult) {
-        this.adult = adult;
-    }
+    public String getTitle() { return title; }
 
     public String getBackdropPath() {
         return backdropPath;
@@ -53,6 +50,14 @@ public class Result {
 
     public void setBackdropPath(String backdropPath) {
         this.backdropPath = backdropPath;
+    }
+
+    public String getFirstAirDate() {
+        return firstAirDate;
+    }
+
+    public void setFirstAirDate(String firstAirDate) {
+        this.firstAirDate = firstAirDate;
     }
 
     public List<Long> getGenreIds() {
@@ -79,6 +84,22 @@ public class Result {
         this.mediaType = mediaType;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<String> getOriginCountry() {
+        return originCountry;
+    }
+
+    public void setOriginCountry(List<String> originCountry) {
+        this.originCountry = originCountry;
+    }
+
     public String getOriginalLanguage() {
         return originalLanguage;
     }
@@ -87,12 +108,12 @@ public class Result {
         this.originalLanguage = originalLanguage;
     }
 
-    public String getOriginalTitle() {
-        return originalTitle;
+    public String getOriginalName() {
+        return originalName;
     }
 
-    public void setOriginalTitle(String originalTitle) {
-        this.originalTitle = originalTitle;
+    public void setOriginalName(String originalName) {
+        this.originalName = originalName;
     }
 
     public String getOverview() {
@@ -119,33 +140,13 @@ public class Result {
         this.posterPath = posterPath;
     }
 
-    public String getReleaseDate() {
-        return releaseDate;
+    public Double getVoteAverage() {
+        return voteAverage;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setVoteAverage(Double voteAverage) {
+        this.voteAverage = voteAverage;
     }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Boolean getVideo() {
-        return video;
-    }
-
-    public void setVideo(Boolean video) {
-        this.video = video;
-    }
-
-
-
-
 
     public Long getVoteCount() {
         return voteCount;

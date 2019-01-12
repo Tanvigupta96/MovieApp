@@ -49,7 +49,13 @@ public class SearchItemAdapter extends RecyclerView.Adapter<SearchItemViewHolder
         Picasso.get().load(Constants.IMAGE_BASE_URL + result.getPosterPath()).into(holder.poster);
         type = result.getMediaType();
         holder.type.setText(type);
-        holder.title.setText(result.getOriginalTitle());
+        if(type.equals("movie")) {
+            holder.title.setText(result.getTitle());
+
+        }
+        else{
+            holder.title.setText(result.getName());
+        }
 
 
         if (result.getOverview() == null|| result.getOverview().length()== 0) {
