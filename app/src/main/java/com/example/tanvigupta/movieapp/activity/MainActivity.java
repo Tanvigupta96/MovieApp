@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
 
             case R.id.aboutus:
-                getSupportActionBar().setTitle("About us!");
+                getSupportActionBar().setTitle("About");
 
                 transaction.replace(R.id.container,aboutUsFragment);
                 break;

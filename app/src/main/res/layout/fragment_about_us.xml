@@ -215,7 +215,8 @@
         android:layout_height="50dp"
         android:elevation="5dp"
         app:cardCornerRadius="6dp"
-        app:contentPadding="2dp">
+        app:contentPadding="2dp"
+        app:cardUseCompatPadding="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -238,8 +239,9 @@
         android:elevation="5dp"
         app:cardCornerRadius="6dp"
         app:contentPadding="4dp"
-
-        android:layout_marginTop="2dp">
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        app:cardUseCompatPadding="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -248,7 +250,6 @@
             android:text="Privacy Policy"
             android:textStyle="bold"
             android:gravity="center"
-
             />
 
 
@@ -265,6 +266,7 @@
         app:cardCornerRadius="4dp"
         app:contentPadding="4dp"
         android:layout_marginTop="2dp"
+        app:cardUseCompatPadding="true"
         >
 
         <LinearLayout
@@ -283,7 +285,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1.7.0"
+                android:text="1.8.0"
                 android:layout_marginLeft="10dp"/>
 
         </LinearLayout>
@@ -292,6 +294,7 @@
 
 
     <ImageView
+        android:id="@+id/imdb"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
