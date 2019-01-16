@@ -52,9 +52,9 @@ public class ReviewsAdapter extends RecyclerView.Adapter<ReviewsViewHolder> {
        int length=result.getContent().length();
 
         SpannableString text=new SpannableString("...Read More");
-        if(length>200 &&(Math.abs(length-200))>10){
+        if(length>300 &&(Math.abs(length-300))>10){
 
-            SpannableStringBuilder spannableStringBuilder=new SpannableStringBuilder(result.getContent(),0,45);
+            SpannableStringBuilder spannableStringBuilder=new SpannableStringBuilder(result.getContent(),0,100);
             spannableStringBuilder.append(text);
 
             holder.content.setText(spannableStringBuilder.toString());

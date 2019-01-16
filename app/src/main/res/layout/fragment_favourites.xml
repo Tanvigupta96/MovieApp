@@ -24,7 +24,9 @@
             android:layout_height="wrap_content"
             app:tabIndicatorColor="#6cd5d7"
             app:tabIndicatorHeight="4dp"
-            app:tabMinWidth="180dp"
+            app:tabMinWidth="205dp"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
             android:background="#e7e6e6">
 
 

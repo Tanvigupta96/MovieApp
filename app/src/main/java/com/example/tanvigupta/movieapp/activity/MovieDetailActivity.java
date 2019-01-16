@@ -162,7 +162,7 @@ public class MovieDetailActivity extends AppCompatActivity implements View.OnCli
 
         Intent intent = getIntent();
         id = intent.getLongExtra("ID", 0);
-        Log.d("TvShowDetailActivity", id + "");
+        Log.d("MovieDetailActivity", id + "");
 
 
         adapter5 = new SimilarMovieAdapter(this, results, new MovieClickListener() {

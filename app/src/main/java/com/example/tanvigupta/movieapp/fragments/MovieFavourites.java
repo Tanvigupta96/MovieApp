@@ -72,7 +72,7 @@ public class MovieFavourites extends Fragment {
                 @Override
                 public void onmovieclicked(long id) {
                     Intent intent=new Intent(getContext(), MovieDetailActivity.class);
-                    intent.putExtra("ID",movieDatabase.getDao().getMovieId());
+                    intent.putExtra("ID",id);
                     startActivity(intent);
 
                 }

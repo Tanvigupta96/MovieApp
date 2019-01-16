@@ -56,7 +56,7 @@ public class TvFavourites extends Fragment {
                 @Override
                 public void onshowclicked(long id) {
                     Intent intent=new Intent(getContext(), TvShowDetailActivity.class);
-                    intent.putExtra("ID",movieDatabase.getDao().getTvId());
+                    intent.putExtra("ID",id);
                     startActivity(intent);
                 }
             });
