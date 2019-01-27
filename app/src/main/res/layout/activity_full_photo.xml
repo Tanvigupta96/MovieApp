@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.FullPhotoActivity"
     android:orientation="vertical"
+    android:background="#d1d1d1"
+
    >
 
 
@@ -20,12 +22,47 @@
         app:titleTextColor="#ffffff"/>
 
 
-    <ImageView
-        android:layout_marginTop="15dp"
-        android:id="@+id/image"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/ballpulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:indicator="BallPulse"
+        app:indicator_color="#6b6a6a"
+        android:layout_gravity="center"
+
         />
+
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:padding="2dp"
+        android:background="@drawable/imageview_border"
+
+        />
+
+    </FrameLayout>
+
+
+
+    <Gallery
+        android:id="@+id/simplegallery"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:unselectedAlpha="0.80"
+        />
+
+
 
 
 </LinearLayout>

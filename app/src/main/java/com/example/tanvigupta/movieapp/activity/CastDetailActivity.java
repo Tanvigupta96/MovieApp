@@ -14,6 +14,7 @@ import android.support.v7.widget.SnapHelper;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
+import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
@@ -160,6 +161,7 @@ public class CastDetailActivity extends AppCompatActivity  {
                 Intent intent1=new Intent(getApplicationContext(),FullPhotoActivity.class);
                 intent1.putExtra("FilePath",filepath);
                 intent1.putExtra("Name",name);
+                intent1.putExtra("castId",castId);
                 Log.d("CastDetailActivity",filepath);
                 startActivity(intent1);
             }
@@ -209,14 +211,12 @@ public class CastDetailActivity extends AppCompatActivity  {
         ballspinfadeloader();
         ballPulseAnimLoader();
 
-
-
-    }
+        }
 
 
     public void initialize(PersonResponse response) {
         Parent.setVisibility(View.VISIBLE);
-        PersonResponse personResponse = response;
+        final PersonResponse personResponse = response;
         if (personResponse.getBiography().length()!=0) {
 
             //spannable wala code
@@ -230,6 +230,7 @@ public class CastDetailActivity extends AppCompatActivity  {
                 spannableStringBuilder.append(text);
 
                 biography.setText(spannableStringBuilder.toString());
+
             } else {
 
                 biography.setText(personResponse.getBiography());
@@ -396,4 +397,6 @@ public class CastDetailActivity extends AppCompatActivity  {
     public void ballPulseAnimLoadergone(){
         findViewById(R.id.ballpulse).setVisibility(View.GONE);
     }
+
+
 }
