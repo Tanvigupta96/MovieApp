@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView = findViewById(R.id.bottomNav);
         collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitleEnabled(false);
-        getSupportActionBar().setTitle("Movies");
+        getSupportActionBar().
+        setTitle("Movies");
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
